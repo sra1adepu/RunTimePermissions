@@ -153,6 +153,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.setting:
                 Intent intent = new Intent();
+                //try once
+                //intent.setClassName("com.android.settings", "com.android.settings.Settings");
+                //intent.setAction(Settings.ACTION_ACCESSIBILITY_SETTINGS);
                 intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                 Uri uri = Uri.fromParts("package",this.getPackageName(),null);
                 intent.setData(uri);
